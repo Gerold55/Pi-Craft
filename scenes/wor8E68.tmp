@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://42ldmdku30fh"]
+
+[ext_resource type="Script" path="res://scripts/TerrainGenerator.gd" id="1_3xiqk"]
+[ext_resource type="Script" path="res://scripts/block_library.gd" id="2_uun0a"]
+
+[node name="World" type="Node3D"]
+script = ExtResource("1_3xiqk")
+block_size = 1.0
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+
+[node name="Node3D" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="Node3D"]
+
+[node name="BlockLibrary" type="Node3D" parent="."]
+script = ExtResource("2_uun0a")
+
+[node name="TerrainGenerator" type="Node3D" parent="."]
+script = ExtResource("1_3xiqk")

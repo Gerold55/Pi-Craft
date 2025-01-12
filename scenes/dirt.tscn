@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://87udein6gg1l"]
+
+[ext_resource type="Texture2D" uid="uid://wodv2ss56q7d" path="res://assets/textures/dirt.png" id="1_yh5ut"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vpt88"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_gkg2c"]
+albedo_texture = ExtResource("1_yh5ut")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qskf6"]
+
+[node name="Dirt" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_vpt88")
+surface_material_override/0 = SubResource("StandardMaterial3D_gkg2c")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qskf6")

@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://nxa0s3qwousa"]
+
+[ext_resource type="Texture2D" uid="uid://osvsdapgpkps" path="res://assets/textures/grass_top.png" id="1_uf14w"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_vpt88"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qjr4t"]
+albedo_texture = ExtResource("1_uf14w")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qskf6"]
+
+[node name="Grass" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_vpt88")
+surface_material_override/0 = SubResource("StandardMaterial3D_qjr4t")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_qskf6")
